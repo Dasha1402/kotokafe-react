@@ -1,0 +1,24 @@
+.rulesList {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+}
+
+.ruleItem {
+	display: flex;
+	gap: 15px;
+	align-items: flex-start;
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.icon {
+	font-size: 2rem;
+}
+
+.ruleItem p {
+	margin-top: 5px;
+	color: #555;
+}

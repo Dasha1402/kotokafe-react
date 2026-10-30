@@ -1,0 +1,103 @@
+.card {
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	gap: 30px;
+	align-items: center;
+	background-color: white;
+	padding: 20px;
+	border-radius: 15px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.imageWrapper {
+	position: relative;
+	cursor: pointer;
+}
+
+	.imageWrapper img {
+		border-radius: 10px;
+		width: 100%;
+		height: 350px;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+
+	.imageWrapper:hover img {
+		transform: scale(1.02);
+	}
+
+.speechBubble {
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	color: #4a3b32;
+	padding: 12px 20px;
+	border-radius: 20px;
+	font-weight: bold;
+	font-size: 1rem;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+	border: 2px solid #c96b6b;
+	z-index: 10;
+	animation: popIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	white-space: nowrap;
+}
+
+	.speechBubble::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		transform: translateX(-50%);
+		border-width: 10px 10px 0;
+		border-style: solid;
+		border-color: #c96b6b transparent transparent transparent;
+	}
+
+@keyframes popIn {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%) scale(0.5);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(-50%) scale(1);
+	}
+}
+
+.info h3 {
+	font-size: 1.8rem;
+	margin-bottom: 15px;
+	color: #4a3b32;
+}
+
+.info p {
+	margin-bottom: 8px;
+	font-size: 0.95rem;
+}
+
+.quote {
+	font-style: italic;
+	color: #777;
+	margin-top: 15px;
+	border-left: 3px solid #c96b6b;
+	padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+	.card {
+		grid-template-columns: 1fr;
+	}
+
+	.imageWrapper img {
+		height: 250px;
+	}
+
+	.speechBubble {
+		white-space: normal;
+		width: 80%;
+		font-size: 0.9rem;
+	}
+}

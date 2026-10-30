@@ -1,0 +1,50 @@
+.teamGrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 30px;
+	text-align: center;
+}
+
+.teamCard {
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+	.teamCard:hover {
+		transform: translateY(-8px);
+		box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	}
+
+	.teamCard img {
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+		object-fit: cover;
+		margin: 0 auto 15px;
+	}
+
+	.teamCard h4 {
+		font-size: 1.1rem;
+		color: #4a3b32;
+	}
+
+	.teamCard p {
+		font-size: 0.9rem;
+		color: #777;
+		margin-bottom: 10px;
+	}
+
+.quote {
+	font-style: italic;
+	margin: 10px 0;
+	color: #555;
+}
+
+.favoriteCat {
+	font-size: 0.85rem;
+	font-weight: bold;
+	color: #c96b6b;
+}

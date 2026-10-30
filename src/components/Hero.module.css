@@ -1,0 +1,57 @@
+.hero {
+	background-image: url('/img/фон.png');
+	background-size: cover;
+	background-position: center;
+	color: white;
+	text-align: center;
+	padding: 100px 0;
+	position: relative;
+}
+
+	.hero::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(0, 0, 0, 0.4);
+		z-index: 1;
+	}
+
+.heroContent {
+	position: relative;
+	z-index: 2;
+}
+
+	.heroContent h1 {
+		font-size: 3.5rem;
+		margin-bottom: 20px;
+		font-weight: 400;
+		letter-spacing: 2px;
+	}
+
+	.heroContent p {
+		font-size: 1.2rem;
+		margin-bottom: 30px;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+.heroButtons {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+}
+
+@media (max-width: 768px) {
+	.heroContent h1 {
+		font-size: 2.5rem;
+	}
+
+	.heroButtons {
+		flex-direction: column;
+		align-items: center;
+	}
+}

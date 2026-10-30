@@ -1,0 +1,97 @@
+/* Базовые сбросы */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Контейнер для центрирования */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Общие стили секций */
+.section {
+    padding: 60px 0;
+}
+
+.bg-light {
+    background-color: #fcf8f2; /* Светло-бежевый фон */
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #4a3b32;
+    font-weight: 400;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Кнопки */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background-color: #c96b6b;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #b05858;
+    }
+
+.btn-secondary {
+    background-color: #f0e6dd;
+    color: #4a3b32;
+}
+
+    .btn-secondary:hover {
+        background-color: #e0d0c0;
+    }
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}/* Для плавной прокрутки по ссылкам */

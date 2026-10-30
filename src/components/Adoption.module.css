@@ -1,0 +1,135 @@
+.adoptionInfo {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 30px;
+	margin-bottom: 40px;
+}
+
+.infoBlock h4 {
+	margin-bottom: 15px;
+	font-size: 1.2rem;
+}
+
+.infoBlock ul li {
+	margin-bottom: 10px;
+	font-size: 0.95rem;
+}
+
+/* Переиспользуем стили формы из бронирования */
+.formContainer {
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 30px;
+	border-radius: 15px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.formGroup {
+	margin-bottom: 20px;
+}
+
+	.formGroup label {
+		display: block;
+		margin-bottom: 8px;
+		font-weight: 600;
+		font-size: 0.9rem;
+		color: #4a3b32;
+	}
+
+	.formGroup input[type="text"],
+	.formGroup input[type="tel"],
+	.formGroup input[type="email"],
+	.formGroup input[type="number"],
+	.formGroup textarea {
+		width: 100%;
+		padding: 12px;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		font-family: inherit;
+		font-size: 1rem;
+	}
+
+		.formGroup input:focus,
+		.formGroup textarea:focus {
+			outline: none;
+			border-color: #c96b6b;
+		}
+
+.radioGroup {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+}
+
+	.radioGroup label {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		font-weight: normal;
+		cursor: pointer;
+	}
+
+.checkboxGroup {
+	display: flex;
+	align-items: flex-start;
+	gap: 10px;
+	margin-bottom: 15px;
+}
+
+	.checkboxGroup label {
+		font-weight: normal;
+		font-size: 0.85rem;
+		color: #777;
+		margin-bottom: 0;
+	}
+
+.sectionHeader {
+	margin-top: 30px;
+	margin-bottom: 20px;
+	font-size: 1.2rem;
+	color: #c96b6b;
+	border-bottom: 2px solid #f0e6dd;
+	padding-bottom: 5px;
+}
+
+.submitBtn {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.successMessage {
+	text-align: center;
+	padding: 40px 20px;
+	background: #e6f7e6;
+	border-radius: 15px;
+	color: #2e7d32;
+	border: 2px solid #a5d6a7;
+}
+
+@media (max-width: 768px) {
+	.adoptionInfo {
+		grid-template-columns: 1fr;
+	}
+}
+
+.submitBtn:disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+	opacity: 0.7;
+}
+
+	.submitBtn:disabled:hover {
+		background-color: #ccc;
+	}
+
+.errorText {
+	color: #ff4757;
+	font-size: 0.85rem;
+	margin-top: 5px;
+	display: block;
+}
+
+.inputError {
+	border-color: #ff4757 !important;
+}

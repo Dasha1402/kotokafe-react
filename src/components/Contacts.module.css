@@ -1,0 +1,40 @@
+.contactsGrid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 40px;
+}
+
+.contactInfo p {
+	margin-bottom: 15px;
+	font-size: 1rem;
+}
+
+.socialLinks {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+	.socialLinks a {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		font-size: 1.1rem;
+		color: #4a3b32;
+		transition: color 0.3s;
+	}
+
+		.socialLinks a:hover {
+			color: #c96b6b;
+		}
+
+/* Эмуляция иконок */
+.icon {
+	font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+	.contactsGrid {
+		grid-template-columns: 1fr;
+	}
+}

@@ -1,0 +1,51 @@
+.faqList {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.faqItem {
+	background: white;
+	margin-bottom: 10px;
+	border-radius: 8px;
+	padding: 15px;
+	box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.summary {
+	font-weight: 600;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.icon {
+	font-size: 1.5rem;
+	color: #c96b6b;
+	transition: transform 0.3s ease;
+}
+
+	.icon.open {
+		transform: rotate(45deg); /* Плюсик превращается в крестик */
+	}
+
+.answer {
+	margin-top: 15px;
+	color: #666;
+	padding-top: 15px;
+	border-top: 1px solid #eee;
+	animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
