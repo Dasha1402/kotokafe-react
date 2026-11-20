@@ -1,75 +1,38 @@
-# React + TypeScript + Vite
+# The Cat's Cup — сайт котокафе
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Адаптивный SPA-сайт вымышленного котокафе: каталог котов, меню и форма «забрать кота домой».
 
-Currently, two official plugins are available:
+🔗  **Демо:** https://dasha1402.github.io/kotokafe-react/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Что реализовано
 
-## React Compiler
+- **Интерактивные карточки котов.** При наведении курсора показывается «облачко» с фразой. Состояние хранится в `useState` (`showBubble`), показ управляется событием `onMouseEnter`.
+- **Загрузка данных по API.** Кастомный хук `useUsers` запрашивает список через `fetch`, получает JSON и сохраняет его в состояние. Имена котов появляются после ответа сервера.
+- **Форма усыновления с валидацией.** Кнопка отправки неактивна, пока не отмечено согласие на обработку данных или если указан возраст младше 18 лет.
+- **Компонентная структура.** Header, Hero, меню, CatCard, формы и Footer собраны в `App.tsx`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Стек
 
-## Expanding the ESLint configuration
+React 19, TypeScript, Vite, CSS Modules, деплой через gh-pages.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Запуск локально
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/Dasha1402/kotokafe-react.git
+cd kotokafe-react
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Сборка и деплой
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run build
+npm run deploy
 ```
+
+## Что можно улучшить
+
+- Подключить собственный бэкенд вместо внешнего API для списка котов
+- Добавить тесты для логики валидации формы
+- Добавить обработку ошибок и состояние загрузки при запросе
